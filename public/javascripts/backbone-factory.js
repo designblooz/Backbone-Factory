@@ -33,8 +33,6 @@
           return new klass(models, options);
         }
 
-        debugger;
-
         return new klass(arguments, options);
       };
 
@@ -48,8 +46,8 @@
       if(this.factories[factory_name] === undefined){
         throw "Factory with name " + factory_name + " does not exist";
       }
-      debugger;
-      return this.factories[factory_name].apply(options);
+
+      return this.factories[factory_name].apply(null, [options]);
     },
 
     define_sequence: function(sequence_name, callback){
