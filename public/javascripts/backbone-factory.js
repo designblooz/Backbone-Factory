@@ -20,7 +20,7 @@
       this.factories[factory_name] = function(options){
         if(options === undefined) options = function(){return {}};
 
-        arguments =  _.extend({}, {id: BackboneFactory.next("_" + factory_name + "_id")}, defaults.call(), options.call());
+        arguments =  _.extend({}, {id: BackboneFactory.next("_" + factory_name + "_id")}, defaults.call());
 
         // for collection object
         if(type === 'collection') {
@@ -30,10 +30,12 @@
               models.push(arguments[x]);
             }
           }
-          return new klass(models);
+          return new klass(models, options);
         }
 
-        return new klass(arguments);
+        debugger;
+
+        return new klass(arguments, options);
       };
 
       // Lets define a sequence for id
@@ -46,7 +48,8 @@
       if(this.factories[factory_name] === undefined){
         throw "Factory with name " + factory_name + " does not exist";
       }
-      return this.factories[factory_name].apply(null, [options]);
+      debugger;
+      return this.factories[factory_name].apply(options);
     },
 
     define_sequence: function(sequence_name, callback){
