@@ -1,0 +1,14 @@
+{
+  "name": "Backbone-Factory",
+  "repo": "designblooz/Backbone-Factory",
+  "description": "Simple Factory builder for backbone.js",
+  "version": "0.2",
+  "main": "public/backbone-factory.js",
+  "scripts": [
+    "public/backbone-factory.js"
+  ],
+  "keywords": [
+    "backbone",
+    "factory"
+  ]
+}
