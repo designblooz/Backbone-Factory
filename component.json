@@ -2,7 +2,7 @@
   "name": "Backbone-Factory",
   "repo": "designblooz/Backbone-Factory",
   "description": "Simple Factory builder for backbone.js",
-  "version": "0.2",
+  "version": "0.3",
   "main": "public/javascripts/backbone-factory.js",
   "scripts": [
     "public/javascripts/backbone-factory.js"
